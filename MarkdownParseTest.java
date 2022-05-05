@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import org.junit.*;
 public class MarkdownParseTest {
 
-    String filePath = "C:\\Users\\JYoung\\Documents\\GitHub\\markdown-parser-collab\\";
-
     @Test
     public void addition() {
         assertEquals(2, 1 + 1);
@@ -30,7 +28,7 @@ public class MarkdownParseTest {
     @Test
     public void getLinksTest() throws IOException {
         boolean result = false;
-        Path fileName = Path.of(filePath + "testFile.md");
+        Path fileName = Path.of("testFile.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
 
@@ -45,7 +43,7 @@ public class MarkdownParseTest {
     @Test
     public void testFile() throws IOException {
         boolean result = false;
-        Path fileName = Path.of(filePath + "test-file.md");
+        Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
 
@@ -60,7 +58,7 @@ public class MarkdownParseTest {
     @Test
     public void testFile9() throws IOException {
         boolean result = false;
-        Path fileName = Path.of(filePath + "test-file9.md");
+        Path fileName = Path.of("test-file9.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
 
